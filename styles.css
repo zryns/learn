@@ -1,0 +1,68 @@
+p
+{
+color: #424342;
+font-family: Verdana, Geneva, sans-serif;
+}
+body
+{
+background-color: #f1f1f1;
+}
+#mid
+{
+text-align: center;
+}
+.mycls
+{
+font-family: Tahoma, Geneva, sans-serif;
+}
+
+/*:not(p)
+{
+    background: #e7f4e4;
+}*/
+/*In styles.css file, you can add comments using the opening symbols ‘/*’ and closing symbols */
+
+a:visited
+ {
+ color: #4c2c92;
+ }
+a:hover
+ {
+ color: #212121;
+ }
+a:active
+ {
+ color: #1C1C1C;
+ }
+ /*There are three pseudo-classes used for the links in the style sheet. These are as follows:
+ :visited - This class is used if you want to select and define styles for all the visited links on the page.
+ :hover - This class is used if you want to select and define styles for all the links when the mouse hovered over them on the page.
+ :active - This class is used if you want to select and define styles for all the active links on the page.
+ The respective colors will be displayed for the links as defined in the style sheet.*/
+
+ ul
+{
+ list-style-type: none;
+ margin: 0;
+ padding: 0;
+ overflow: hidden;
+ background-color: #8ba6ca;
+}
+li
+{
+ float: left;
+ }
+ li a
+{
+ display: block;
+ color: white;
+ text-align: center;
+ padding: 14px 16px;
+ text-decoration: none;
+}
+/*The following properties are defined for the <li> and <a> tags:
+display - This property determines how the elements will be displayed on the page.
+color - This property specifies the color of the list items.
+text-align - This property determines the alignment of the text in an unordered list.
+padding - This property specifies the spaces generated around the list items.
+text-decoration - This property helps to specify the decoration style for the text.*/
