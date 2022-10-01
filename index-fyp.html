@@ -1,0 +1,546 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <title>PAVEMENT DESIGN MANUAL</title>
+</head>
+
+<body class="bg-white">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 mx-auto">
+                <div class=".card.card-body.text-center mt-5">
+                    <h1 class="heading display-5 pb-3">PAVEMENT DESIGN MANUAL</h1>
+                    <form action="" id="pdm-form">
+                        <div class="form-group">
+                            <div class="input-group">
+                                <span class="input-group-text">V</span>
+                                <input type="text" class="form-control" id="V" placeholder="V" required>
+                            </div>
+                        </div>
+
+                        <!--Result-->
+                        <div class="form-group">
+                            <div class="input-group">
+                                <span class="input-group-text">ADT</span>
+                                <input type="number" class="form-control" id="ADT" disabled>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="input-group">
+                                <span class="input-group-text">PCV (%)</span>
+                                <input type="text" class="form-control" id="PCV" placeholder="PCV" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="input-group">
+                                <span class="input-group-text">L</span>
+                                <select class="form-control" id="L">
+                                    <option value="L">Select Lane Distribution Factor</option>
+                                    <option value="1.0">1.0</option>
+                                    <option value="0.9">0.9</option>
+                                    <option value="0.7">0.7</option>
+                                </select>
+                                <!-- Button trigger modal -->
+                                <button type="button" class="btn btn-primary" data-toggle="modal"
+                                    data-target="#exampleModal">
+                                    Refer Table 2
+                                </button>
+
+                                <!-- Modal -->
+                                <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog"
+                                    aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog" role="document">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h5 class="modal-title" id="exampleModalLabel">Table 2</h5>
+                                                <button type="button" class="close" data-dismiss="modal"
+                                                    aria-label="Close">
+                                                    <span aria-hidden="true">&times;</span>
+                                                </button>
+                                            </div>
+                                            <div class="modal-body">
+                                                <table class="table">
+                                                    <thead>
+                                                        <tr>
+                                                            <th scope="col">Number of Lanes <br>
+                                                                (in ONE direction)</th>
+                                                            <th scope="col">Lane Distribution<br>
+                                                                Factor, L</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <th scope="row">One</th>
+                                                            <td>1.0</td>
+
+                                                        </tr>
+                                                        <tr>
+                                                            <th scope="row">Two</th>
+                                                            <td>0.9</td>
+
+                                                        </tr>
+                                                        <tr>
+                                                            <th scope="row">Three or more</th>
+                                                            <td>0.7</td>
+
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="input-group">
+                                <span class="input-group-text">T</span>
+                                <select class="form-control" id="T">
+                                    <option value="T">Select Terrain Factor</option>
+                                    <option value="1.0">1.0</option>
+                                    <option value="1.1">1.1</option>
+                                    <option value="1.3">1.3</option>
+                                </select>
+                                <!-- Button trigger modal -->
+                                <button type="button" class="btn btn-primary" data-toggle="modal"
+                                    data-target="#exampleModal2">
+                                    Refer Table 3
+                                </button>
+
+                                <!-- Modal -->
+                                <div class="modal fade" id="exampleModal2" tabindex="-1" role="dialog"
+                                    aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog" role="document">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h5 class="modal-title" id="exampleModalLabel">Table 3</h5>
+                                                <button type="button" class="close" data-dismiss="modal"
+                                                    aria-label="Close">
+                                                    <span aria-hidden="true">&times;</span>
+                                                </button>
+                                            </div>
+                                            <div class="modal-body">
+                                                <table class="table">
+                                                    <thead>
+                                                        <tr>
+                                                            <th scope="col">Type of Terrain</th>
+                                                            <th scope="col">Terrain Factor, T</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <th scope="row">Flat</th>
+                                                            <td>1.0</td>
+
+                                                        </tr>
+                                                        <tr>
+                                                            <th scope="row">Rolling</th>
+                                                            <td>1.1</td>
+
+                                                        </tr>
+                                                        <tr>
+                                                            <th scope="row">Mountainuous/Steep</th>
+                                                            <td>1.3</td>
+
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="input-group">
+                                <span class="input-group-text">LEF</span>
+                                <input type="text" class="form-control" id="LEF" placeholder="LEF" required>
+                                <!-- Button trigger modal -->
+                                <button type="button" class="btn btn-primary" data-toggle="modal"
+                                    data-target="#exampleModal3">
+                                    Refer Table 1
+                                </button>
+
+                                <!-- Modal -->
+                                <div class="modal fade" id="exampleModal3" tabindex="-1" role="dialog"
+                                    aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog" role="document">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h5 class="modal-title" id="exampleModalLabel">Table 1</h5>
+                                                <button type="button" class="close" data-dismiss="modal"
+                                                    aria-label="Close">
+                                                    <span aria-hidden="true">&times;</span>
+                                                </button>
+                                            </div>
+                                            <div class="modal-body">
+                                                <table class="table">
+                                                    <thead>
+                                                        <tr>
+                                                            <th scope="col">Vehicle</th>
+                                                            <th></th>
+                                                            <th colspan="2">Basic for Calculating VLF</th>
+
+                                                            <th scope="col">Vehicle Load Factor(VLF)</th>
+                                                        </tr>
+
+                                                        <tr>
+                                                            <th scope="row">HPU Class Designation</th>
+                                                            <th scope="row"><br>Class</td>
+                                                            <th scope="row"><br>LEF</td>
+                                                            <th scope="row"><br>TAF</td>
+                                                            <th></th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody class="table-group-divider">
+
+                                                        <tr>
+                                                            <th>Cars and Taxis</th>
+                                                            <td>C</td>
+                                                            <td>&lt; 0.01</td>
+                                                            <td>N/A</td>
+                                                            <td>0</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th>Small Trucks and Vans <br> (2 to 4 Axies)</th>
+                                                            <td>CV1</td>
+                                                            <td>0.1</td>
+                                                            <td>1.0</td>
+                                                            <td>0.1</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th>Large Trucks <br> (2 to 4 Axies)</th>
+                                                            <td>CV2</td>
+                                                            <td>4.5 <br> 2.4 <br> 3.1 </td>
+                                                            <td>1.4</td>
+                                                            <td>4.0 <br> (3.2 to 5.2) </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th>Articulated Trucks <br> (3 or more Axies)</th>
+                                                            <td>CV3</td>
+                                                            <td>2.6 <br> 4.2 <br> 2.9 <br> 4.1 </td>
+                                                            <td>1.4</td>
+                                                            <td>4.4 <br> (3.9 to 5.8) </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th>Buses <br> (2 or 3 Axies)</th>
+                                                            <td>CV4</td>
+                                                            <td>1.5</td>
+                                                            <td>1.2</td>
+                                                            <td>1.8</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th>Motorcycles</th>
+                                                            <td>MC</td>
+                                                            <td></td>
+                                                            <td>N/A</td>
+                                                            <td>0</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th>Commercial Traffic (Mixed)</th>
+                                                            <td>CV(%)</td>
+                                                            <td></td>
+                                                            <td></td>
+                                                            <td>3.5</td>
+                                                        </tr>
+
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="input-group">
+                                <span class="input-group-text">TGF</span>
+                                <input type="text" class="form-control" id="TGF" placeholder="TGF">
+                                <!-- Button trigger modal -->
+                                <button type="button" class="btn btn-primary" data-toggle="modal"
+                                    data-target="#exampleModal4">
+                                    Refer Table 4
+                                </button>
+
+                                <!-- Modal -->
+                                <div class="modal fade" id="exampleModal4" tabindex="-1" role="dialog"
+                                    aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog" role="document">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h5 class="modal-title" id="exampleModalLabel">Table 4</h5>
+                                                <button type="button" class="close" data-dismiss="modal"
+                                                    aria-label="Close">
+                                                    <span aria-hidden="true">&times;</span>
+                                                </button>
+                                            </div>
+                                            <div class="modal-body">
+                                                <table id="rate">
+                                                    <table class="table">
+
+
+                                                        <tr>
+                                                            <th colspan="2"></th>
+                                                            <th colspan="6" Align="Center">Annual Growth Rate (%)</th>
+                                                        </tr>
+                                                        <tr>
+                                                            <th colspan="2">Design Period<br>(Years)</th>
+                                                            <th scope="col">2</th>
+                                                            <th scope="col">3</th>
+                                                            <th scope="col">4</th>
+                                                            <th scope="col">5</th>
+                                                            <th scope="col">6</th>
+                                                            <th scope="col">7</th>
+                                                        </tr>
+
+                                                        <tr>
+                                                            <th colspan="2">5</th>
+                                                            <td>5.20</td>
+                                                            <td>5.31</td>
+                                                            <td>5.42</td>
+                                                            <td>5.53</td>
+                                                            <td>5.64</td>
+                                                            <td>5.75</td>
+                                                        </tr>
+
+                                                        <tr>
+                                                            <th colspan="2">10</th>
+                                                            <td>10.95</td>
+                                                            <td>11.46</td>
+                                                            <td>12.01</td>
+                                                            <td>12.58</td>
+                                                            <td>13.18</td>
+                                                            <td>13.82</td>
+                                                        </tr>
+
+                                                        <tr>
+                                                            <th colspan="2">15</th>
+                                                            <td>17.29</td>
+                                                            <td>18.60</td>
+                                                            <td>20.02</td>
+                                                            <td>21.58</td>
+                                                            <td>23.28</td>
+                                                            <td>25.13</td>
+                                                        </tr>
+
+                                                        <tr>
+                                                            <th colspan="2">20</th>
+                                                            <td>24.30</td>
+                                                            <td>26.87</td>
+                                                            <td>29.78</td>
+                                                            <td>33.06</td>
+                                                            <td>36.79</td>
+                                                            <td>41.00</td>
+                                                        </tr>
+
+                                                        <tr>
+                                                            <th colspan="2">25</th>
+                                                            <td>32.03</td>
+                                                            <td>36.46</td>
+                                                            <td>41.65</td>
+                                                            <td>47.73</td>
+                                                            <td>54.86</td>
+                                                            <td>63.25</td>
+                                                        </tr>
+
+                                                        <tr>
+                                                            <th colspan="2">30</th>
+                                                            <td>40.57</td>
+                                                            <td>47.58</td>
+                                                            <td>56.08</td>
+                                                            <td>66.44</td>
+                                                            <td>79.06</td>
+                                                            <td>94.46</td>
+                                                        </tr>
+                                                    </table>
+                                                </table>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="input-group">
+                                <input type="submit" class="btn btn-dark btn-block" value="Calculate">
+                            </div>
+                        </div>
+
+                        <!--Result-->
+                        <div class="form-group">
+                            <div class="input-group">
+                                <span class="input-group-text">ESAL<sub>yi</sub> = ADT * 365 * L * T * LEF</span>
+                                <input type="text" class="form-control" id="ESALyiFormula" value=" " disabled>
+
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="input-group">
+
+                                <input type="number" class="form-control" id="ESALyi" disabled>
+                                <span class="input-group-text">million</span>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="input-group">
+                                <span class="input-group-text">ESAL<sub>des</sub> = ESAL<sub>yi</sub> * TGF </span>
+                                <input type="text" class="form-control" id="ESALdesFormula" value=" " disabled>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="input-group">
+
+                                <input type="number" class="form-control" id="ESALdes" disabled>
+                                <span class="input-group-text">million</span>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="input-group">
+                                <input type="text" class="form-control" id="trafficCat" value=" " disabled>
+                                <!-- Button trigger modal -->
+                                <button type="button" class="btn btn-primary" data-toggle="modal"
+                                    data-target="#exampleModal5">
+                                    Refer Table 5
+                                </button>
+
+                                <!-- Modal -->
+                                <div class="modal fade" id="exampleModal5" tabindex="-1" role="dialog"
+                                    aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog" role="document">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h5 class="modal-title" id="exampleModalLabel">Table 5</h5>
+                                                <button type="button" class="close" data-dismiss="modal"
+                                                    aria-label="Close">
+                                                    <span aria-hidden="true">&times;</span>
+                                                </button>
+                                            </div>
+                                            <div class="modal-body">
+                                                <table class="table">
+                                                    <thead>
+                                                        <tr>
+                                                            <th scope="col">Traffic Category</th>
+                                                            <th scope="col">Design Traffic (ESAL * 10<sup>6</sup>)</th>
+                                                            <th scope="col">Probability (Percentile) <br>
+                                                                Applied to Properties of Sub-Grade Materials</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <th scope="row">T1</th>
+                                                            <td>&le;1.0</td>
+                                                            <td>&#8805;60%</td>
+                                                        </tr>
+
+                                                        <tr>
+                                                            <th scope="row">T2</th>
+                                                            <td>1.1 to 2.0</td>
+                                                            <td>&#8805;70%</td>
+                                                        </tr>
+
+                                                        <tr>
+                                                            <th scope="row">T3</th>
+                                                            <td>2.1 to 10.0</td>
+                                                            <td>&#8805;85%</td>
+                                                        </tr>
+
+                                                        <tr>
+                                                            <th scope="row">T4</th>
+                                                            <td>10.1 to 30.0</td>
+                                                            <td>&#8805;85%</td>
+                                                        </tr>
+
+                                                        <tr>
+                                                            <th scope="row">T5</th>
+                                                            <td>&gt;30.0</td>
+                                                            <td>&#8805;85%</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+
+
+                    <h3 class="heading display-5 pb-4">PART 2 : Sub Grade Category</h3>
+                    <form action="" id="pdm-form">
+                        <div class="form-group">
+                            <div class="input-group">
+                                <span class="input-group-text">CBR Mean (%) </span>
+                                <input type="text" class="form-control" id="CBRMean" placeholder="CBR Mean" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="input-group">
+                                <span class="input-group-text">CBR Standard Deviation (%)</span>
+                                <input type="text" class="form-control" id="CBRSD" placeholder="CBR S.D." required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="input-group">
+                                <span class="input-group-text">Probability (Normal Deviate =</span>
+                                <input type="text" class="form-control" id="Probability" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="input-group">
+                                <input type="text" class="form-control" id="CBRFormula" value=" " disabled>
+                            </div>
+                            <input type="text" class="form-control" id="CBRFormula2" value=" " disabled>
+                        </div>
+                        <div class="form-group">
+                            <div class="input-group">
+                                <input type="text" class="form-control" id="CBR" disabled>
+                                <span class="input-group-text">%</span>
+                            </div>
+                        </div>
+
+
+                </div>
+
+
+                </form>
+                </form>
+
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    <script src="main.js"></script>
+
+</body>
+
+</html>
